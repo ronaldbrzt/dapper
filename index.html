@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dapper — Políticas de compra y envíos</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#000;
+      --text:#fff;
+      --accent:#e6e6e6;
+      --muted:rgba(255,255,255,0.65);
+      --card:rgba(255,255,255,0.03);
+      --glass:rgba(255,255,255,0.02);
+      --radius:12px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+      padding:40px 20px;
+    }
+    .container{
+      max-width:980px;
+      margin:0 auto;
+    }
+    header{
+      text-align:center;
+      margin-bottom:28px;
+    }
+    .brand{
+      font-family: 'Playfair Display', serif;
+      font-size:48px;
+      letter-spacing:2px;
+      margin:0;
+      color:var(--text);
+    }
+    .subtitle{
+      color:var(--muted);
+      margin-top:6px;
+      font-size:14px;
+    }
+    main{display:grid; gap:18px}
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+      border:1px solid rgba(255,255,255,0.03);
+    }
+    h2{
+      margin:0 0 8px 0;
+      font-size:20px;
+      color:var(--accent);
+    }
+    p, li{color:var(--muted); margin:8px 0}
+    ul{padding-left:18px}
+    .small{font-size:13px}
+    .whatsapp{
+      display:inline-block;
+      margin-top:12px;
+      text-decoration:none;
+      padding:10px 14px;
+      border-radius:10px;
+      border:1px solid rgba(255,255,255,0.06);
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      color:var(--text);
+      font-weight:600;
+    }
+    .grid-2{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+    @media (max-width:700px){
+      .brand{font-size:36px}
+      .grid-2{grid-template-columns:1fr}
+      body{padding:24px 14px}
+    }
+    footer{margin-top:22px; text-align:center; color:var(--muted); font-size:13px}
+    /* subtle divider */
+    .divider{height:1px; background:rgba(255,255,255,0.03); margin:10px 0; border-radius:2px}
+    .highlight{color:var(--text); font-weight:600}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class="brand">Dapper</h1>
+      <div class="subtitle">Políticas de compra y envíos</div>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>1. Métodos de pago</h2>
+        <p class="small">Aceptamos <span class="highlight">transferencia bancaria</span> y <span class="highlight">giros Tigo</span>.</p>
+        <p class="small">Todos los pagos deben ser confirmados antes del envío del pedido.</p>
+      </section>
+
+      <section class="card">
+        <h2>2. Confirmación del pedido</h2>
+        <p class="small">Una vez realizado el pago, por favor envía tu comprobante al WhatsApp oficial de <strong>FENX</strong> para procesar tu pedido.</p>
+        <p class="small">Solo se realizarán envíos con pago confirmado.</p>
+        <p class="small">Te enviaremos fotos y videos del proceso de empaquetado de tu pedido, hasta que sea entregado a la transportadora acordada.</p>
+        <a class="whatsapp" href="#" title="Enviar comprobante por WhatsApp">Enviar comprobante (WhatsApp)</a>
+      </section>
+
+      <section class="card grid-2">
+        <div>
+          <h2>3. Envíos a todo Paraguay</h2>
+          <p class="small">Realizamos envíos a cualquier parte del país.</p>
+          <ul class="small">
+            <li>El costo del envío corre por cuenta de la transportadora (varía según la empresa y la ubicación).</li>
+            <li>Usamos empresas confiables y rápidas.</li>
+          </ul>
+        </div>
+        <div>
+          <h2>4. Tiempo de entrega</h2>
+          <p class="small">El tiempo estimado de entrega es de <strong>24 a 48 horas hábiles</strong>.</p>
+          <p class="small">En zonas más alejadas puede demorar un poco más.</p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>5. Cambios y devoluciones</h2>
+        <p class="small">Solo se aceptan cambios en caso de productos defectuosos, dentro de las primeras <strong>48 horas</strong> luego de recibir el pedido.</p>
+        <p class="small">El producto debe estar sin uso y en su empaque original.</p>
+
+        <div class="divider"></div>
+
+        <h2>¿Qué se considera “producto defectuoso”?</h2>
+        <ul class="small">
+          <li>Que el accesorio llegue <strong>roto</strong>, o dañado por el envío.</li>
+          <li>Que el producto tenga <strong>partes sueltas</strong>.</li>
+          <li>Que sea un <strong>modelo diferente</strong> al que se pidió.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Dapper — Todos los derechos reservados
+    </footer>
+  </div>
+
+  <script>
+    // Añade el año actual
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Placeholder: reemplazar href de WhatsApp por el número real
+    const waBtn = document.querySelector('.whatsapp');
+    waBtn.href = 'https://wa.me/595982554822'; // Reemplaza con el número de WhatsApp
+  </script>
+</body>
+</html>
